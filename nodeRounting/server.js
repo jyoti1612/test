@@ -95,6 +95,10 @@ router.delete('/:email', function(req, res) {
     })
 })
 
+app.all('/books', (req, res) => {
+    res.send('This accesses the book section')
+})
+
 app.use('/', router);
 
 let port = 3001;
